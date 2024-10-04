@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Paris 2024</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="Image/LogoLa.png" />
+</head>
+
+<body>
+  <button class="translate-btn" onclick="toggleTranslation()">Traduire en français</button>
+
+  <script>
+    let currentLanguage = 'english';
+
+    function toggleTranslation() {
+      if (currentLanguage === 'english') {
+        // Traduction des éléments principaux en français
+        document.querySelector('h1').innerText = 'Paris 2024';
+        document.querySelector('nav ul li:nth-child(1) a').innerText = 'Accueil';
+        document.querySelector('nav ul li:nth-child(2) a').innerText = 'Infrastructures';
+        document.querySelector('nav ul li:nth-child(3) a').innerText = 'Réseau de Transports';
+        document.querySelector('nav ul li:nth-child(4) a').innerText = 'Sports';
+
+        // Traduction des sections en français
+        document.querySelectorAll('legend h2')[0].innerText = 'Trains et Métro';
+        document.querySelectorAll('fieldset p')[0].innerText = `Le réseau de métro parisien et les trains régionaux (RATP et SNCF) ont joué un rôle central lors des Jeux Olympiques de Paris 2024. Avec des lignes renforcées et des horaires étendus, ils ont permis un accès rapide aux différents sites olympiques. Les stations ont été modernisées et des guides spécifiques ont été mis en place pour diriger les spectateurs vers les lieux de compétition.`;
+
+        document.querySelectorAll('legend h2')[1].innerText = 'Voie réservée aux athlètes';
+        document.querySelectorAll('fieldset p')[1].innerText = `Une voie spéciale a été réservée exclusivement aux athlètes et aux délégations officielles pendant les Jeux Olympiques de Paris 2024. Cette voie, présente sur les principales routes de la capitale, a permis aux athlètes de se déplacer rapidement et en toute sécurité entre leur hébergement et les lieux de compétition. En garantissant des temps de trajet courts, cette initiative a contribué au bon déroulement des Jeux.`;
+
+        // Mise à jour du texte du bouton
+        document.querySelector('.translate-btn').innerText = 'Traduire en anglais';
+        currentLanguage = 'french';
+      } else {
+        // Retour à l'anglais
+        document.querySelector('h1').innerText = 'Paris 2024';
+        document.querySelector('nav ul li:nth-child(1) a').innerText = 'Home';
+        document.querySelector('nav ul li:nth-child(2) a').innerText = 'Infrastructures';
+        document.querySelector('nav ul li:nth-child(3) a').innerText = 'Transports Network';
+        document.querySelector('nav ul li:nth-child(4) a').innerText = 'Sports';
+
+        // Traduction des sections en anglais
+        document.querySelectorAll('legend h2')[0].innerText = 'Trains and Metro';
+        document.querySelectorAll('fieldset p')[0].innerText = `The Paris metro network and regional trains (RATP and SNCF) played a central role during the Paris 2024 Olympics. With reinforced lines and extended timetables, they enabled rapid access to the various Olympic venues. Stations were modernized and specific guides were put in place to direct spectators to the competition venues.`;
+
+        document.querySelectorAll('legend h2')[1].innerText = 'Track Reserved for Athletes';
+        document.querySelectorAll('fieldset p')[1].innerText = `A special lane was reserved exclusively for athletes and official delegations during the Paris 2024 Olympics. This lane, present on the capital's main roads, enabled athletes to travel quickly and safely between their accommodation and competition venues. By guaranteeing short journey times, this initiative contributed to the smooth organization and running of the Games.`;
+
+        // Mise à jour du texte du bouton
+        document.querySelector('.translate-btn').innerText = 'Traduire en français';
+        currentLanguage = 'english';
+      }
+    }
+  </script>
+
+  <header>
+    <a href="index.html">
+      <img src="Image/logoo.png" id="logo" alt="logo"/>
+    </a>
+    <h1>Paris 2024</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructures.html">Infrastructures</a></li>
+        <li><a href="transports.html">Transports Network</a></li>
+        <li><a href="sports.html">Sports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <fieldset>
+
+    <legend>
+      <h2>Trains and Metro</h2>
+    </legend>
+    <p>
+      The Paris metro network and regional trains (RATP and SNCF) played a central role during the Paris 2024 Olympics. With reinforced lines and extended timetables, they enabled rapid access to the various Olympic venues. Stations were modernized and specific guides were put in place to direct spectators to the competition venues.
+    </p>
+
+    <section class="transports">
+      <img src="Image/RER.jpg" alt="image voie des JO" id="transports2">
+      <img src="Image/metro.jpg" alt="image voitures volantes" id="transports2">
+    </section>
+
+  </fieldset>
+
+  <fieldset>
+
+    <legend>
+      <h2>Track Reserved for Athletes</h2>
+    </legend>
+    <p>
+      A special lane was reserved exclusively for athletes and official delegations during the Paris 2024 Olympics. This lane, present on the capital's main roads, enabled athletes to travel quickly and safely between their accommodation and competition venues. By guaranteeing short journey times, this initiative contributed to the smooth organization and running of the Games.
+    </p>
+
+    <section class="transports">
+      <img src="Image/voieJo.jpg" alt="image voie des JO" id="transports2">
+      <img src="Image/routeJo.jpg" alt="image voie des JO" id="transports2">
+    </section>
+
+  </fieldset>
+
+  <footer>
+     © Paris 2024 Olympic Games
+  </footer>
+
+</body>
+
+</html>

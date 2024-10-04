@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Paris 2024 </title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="Image/LogoLa.png" />
+</head>
+
+<body>
+  <button class="translate-btn" onclick="toggleTranslation()">Traduire en français</button>
+
+  <script>
+    let currentLanguage = 'english';
+
+    function toggleTranslation() {
+      if (currentLanguage === 'english') {
+        // Traduire en français
+        document.querySelector('h1').innerText = 'Paris 2024';
+        document.querySelector('nav ul li:nth-child(1) a').innerText = 'Accueil';
+        document.querySelector('nav ul li:nth-child(2) a').innerText = 'Infrastructures';
+        document.querySelector('nav ul li:nth-child(3) a').innerText = 'Réseau de Transports';
+        document.querySelector('nav ul li:nth-child(4) a').innerText = 'Sports';
+
+        // Traduction des sections
+        document.querySelector('legend h2').innerText = 'Natation';
+        document.querySelectorAll('fieldset p')[0].innerText = `Le projet du Centre Aquatique Olympique (CAO) et de la traversée est né de la convergence de deux ambitions métropolitaines : accueillir les Jeux de Paris 2024 et participer au développement d'une région en pleine mutation. En conséquence, le futur centre aquatique, situé à Saint-Denis, a notamment accueilli les épreuves de waterpolo, de plongeon et de natation artistique lors des Jeux de 2024. Situé au cœur de la ZAC de la Plaine Saulnier, le centre aquatique relève un défi majeur en termes d'adaptabilité, offrant des infrastructures innovantes et performantes pour les Jeux de 2024, tout en bénéficiant aux riverains et aux usagers à partir de 2025.`;
+
+        document.querySelectorAll('legend h2')[1].innerText = 'Basket 3X3';
+        document.querySelectorAll('fieldset p')[1].innerText = `La place de la Concorde, qui s'étend sur 7,56 hectares, est la plus grande place de Paris. Elle est située dans le 8e arrondissement. Elle a été aménagée pour les Jeux de Paris 2024, pouvant accueillir plusieurs sports, comme le basket 3X3.`;
+
+        document.querySelectorAll('legend h2')[2].innerText = 'Tir à l\'arc';
+        document.querySelectorAll('fieldset p')[2].innerText = `Esplanade des Invalides, 75007 Paris. Reliée au Grand Palais par le Pont Alexandre III, elle est précédée d'une immense esplanade éponyme, qui a accueilli les épreuves individuelles et par équipe de tir à l'arc dans un stade éphémère de 8000 places.`;
+
+        document.querySelector('.translate-btn').innerText = 'Traduire en anglais';
+        currentLanguage = 'french';
+      } else {
+        // Traduire en anglais
+        document.querySelector('h1').innerText = 'Paris 2024';
+        document.querySelector('nav ul li:nth-child(1) a').innerText = 'Home';
+        document.querySelector('nav ul li:nth-child(2) a').innerText = 'Infrastructures';
+        document.querySelector('nav ul li:nth-child(3) a').innerText = 'Transports Network';
+        document.querySelector('nav ul li:nth-child(4) a').innerText = 'Sports';
+
+        // Traduction des sections en anglais
+        document.querySelector('legend h2').innerText = 'Swimming';
+        document.querySelectorAll('fieldset p')[0].innerText = `The Olympic Aquatic Center (OAC) and crossing project was born out of the convergence of two metropolitan ambitions: to host the Paris 2024 Games and to participate in the development of a rapidly changing region. As a result, the future aquatic center, located in Saint-Denis, notably hosted the Olympic waterpolo, diving and artistic swimming events as part of the 2024 Games. Located in the heart of ZAC de la Plaine Saulnier, the aquatic center meets a major challenge in terms of adaptability, offering innovative, high-performance infrastructures for the 2024 Games, while at the same time benefiting local residents and users from 2025 onwards.`;
+
+        document.querySelectorAll('legend h2')[1].innerText = 'Basket 3X3';
+        document.querySelectorAll('fieldset p')[1].innerText = `Place de la Concorde, spanning 7.56 hectares, is the largest square in Paris. Located in the 8th arrondissement, it was set up for the Paris 2024 Games to host several sports, including 3X3 basketball.`;
+
+        document.querySelectorAll('legend h2')[2].innerText = 'Archery';
+        document.querySelectorAll('fieldset p')[2].innerText = `Esplanade des Invalides, 75007 Paris. Connected to the Grand Palais by the Pont Alexandre III, it is preceded by a vast esplanade that hosted individual and team archery events in an 8000-seat temporary stadium.`;
+
+        document.querySelector('.translate-btn').innerText = 'Traduire en français';
+        currentLanguage = 'english';
+      }
+    }
+  </script>
+
+  <header>
+    <a href="index.html">
+      <img src="Image/logoo.png" id="logo" alt="logo"/>
+    </a>
+    <h1> Paris 2024 </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructures.html">Infrastructures</a></li>
+        <li><a href="transports.html">Transports Network</a></li>
+        <li><a href="sports.html">Sports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <fieldset>
+
+    <legend>
+      <h2>Swimming</h2>
+    </legend>
+
+    <p>
+      The Olympic Aquatic Center (OAC) and crossing project was born out of the convergence of two metropolitan ambitions: to host the Paris 2024 Games and to participate in the development of a rapidly changing region. As a result, the future aquatic center, located in Saint-Denis, notably hosted the Olympic waterpolo, diving and artistic swimming events as part of the 2024 Games. Located in the heart of 
+       <em id="gras">ZAC de la Plaine Saulnier</em>, the aquatic center meets a major challenge in terms of adaptability, offering innovative, high-performance infrastructures for the 2024 Games, while at the same time benefiting local residents and users from 2025 onwards.
+    </p>
+
+    <section class="transports">
+      <img src="Image/Centre.jpg" alt="image natation artistique des JO" id="transports2">
+      <img src="Image/Artistique.jpg" alt="image voitures volantes" id="transports2">
+    </section>
+
+    <h3>Means of transport:</h3>
+    <ul id="ecriture">
+      <li> Train: H</li>
+      <li> RER: B </li>
+      <li> Métro: 13</li>
+      <li>Bus: 153, 170, 173, 239, 353, 255, N44</li>
+    </ul>
+
+  </fieldset>
+
+  <fieldset>
+
+    <legend>
+      <h2>Basket 3X3</h2>
+    </legend>
+
+    <p>
+      Place de la Concorde, spanning 7.56 hectares, is the largest square in Paris. Located in the 8th arrondissement, it was set up for the Paris 2024 Games to host several sports, including <em id="gras"> 3X3 basketball </em>.
+    </p>
+
+    <section class="transports">
+      <img src="Image/concorde.jpg" alt="image voie des JO" id="transports2">
+      <img src="Image/basketJo.jpg" alt="image voitures volantes" id="transports2">
+    </section>
+
+    <h3>Means of transport:</h3>
+    <ul id="ecriture">
+      <li> Train: J, L</li>
+      <li> RER: C </li>
+      <li>Bus: 42, 45, 52, 66, 87, 93, 73, N11, 84, 94</li>
+    </ul>
+
+  </fieldset>
+
+  <fieldset>
+
+    <legend>
+      <h2>Archery</h2>
+    </legend>
+
+    <p>
+      Esplanade des Invalides, 75007 Paris. Connected to the Grand Palais by the Pont Alexandre III, it is preceded by a vast esplanade that hosted individual and team <em id="gras"> archery </em> events in an 8000-seat temporary stadium.
+    </p>
+
+    <section class="transports">
+      <img src="Image/Arc.jpeg" id="transports2">
+      <img src="Image/TireArc.jpg" id="transports2">
+    </section>
+
+    <h3>Means of transport:</h3>
+    <ul id="ecriture">
+      <li> RER: C </li>
+      <li> Métro: 13, 8, C, 12 </li>
+      <li> Bus: 28, 63, 68, 69, 95, 87, 93, 83, N01</li>
+    </ul>
+
+  </fieldset>
+
+  <footer>
+     © Paris 2024 Olympic Games
+  </footer>
+
+</body>
+
+</html>

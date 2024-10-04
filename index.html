@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Paris 2024</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="Image/LogoLa.png" />
+  </head>
+
+  <body>
+    <button class="translate-btn" onclick="toggleTranslation()">
+      Traduire en français
+    </button>
+
+    <script>
+      // Variable pour suivre l'état de la langue actuelle
+      let currentLanguage = "english";
+
+      function toggleTranslation() {
+        if (currentLanguage === "english") {
+          // Traduire en français
+          document.getElementById("header-title").innerText = "Paris 2024";
+          document.querySelector("nav ul li:nth-child(1) a").innerText =
+            "Accueil";
+          document.querySelector("nav ul li:nth-child(2) a").innerText =
+            "Infrastructures";
+          document.querySelector("nav ul li:nth-child(3) a").innerText =
+            "Réseau de Transports";
+          document.querySelector("nav ul li:nth-child(4) a").innerText =
+            "Sports";
+
+          document.getElementById("welcome-title").innerText = "Bienvenue";
+          document.getElementById("welcome-text").innerText =
+            "LA 2028 arrive bientôt! Nous attendons tous avec impatience le début des Jeux Olympiques. Des athlètes de classe mondiale venus des quatre coins du monde. Los Angeles s'apprête à accueillir l'un des événements les plus spectaculaires de l'histoire, où le sport et la culture se rencontrent pour offrir une nouvelle expérience. Préparez-vous à vivre la magie des Jeux Olympiques comme jamais auparavant.";
+
+          document.getElementById("info-title").innerText = "Informations";
+          document.getElementById("info-text").innerText =
+            "Derniers résultats des compétitions :";
+
+          document.querySelector(".translate-btn").innerText =
+            "Traduire en anglais";
+          currentLanguage = "french"; // Changer l'état de la langue
+        } else {
+          // Traduire en anglais
+          document.getElementById("header-title").innerText = "Paris 2024";
+          document.querySelector("nav ul li:nth-child(1) a").innerText = "Home";
+          document.querySelector("nav ul li:nth-child(2) a").innerText =
+            "Infrastructures";
+          document.querySelector("nav ul li:nth-child(3) a").innerText =
+            "Transports Network";
+          document.querySelector("nav ul li:nth-child(4) a").innerText =
+            "Sports";
+
+          document.getElementById("welcome-title").innerText = "Welcome";
+          document.getElementById("welcome-text").innerText =
+            "LA 2028 is coming soon! We're all looking forward to the Olympics starting as soon as possible. Class athletes from all over the world. Los Angeles is set to host one of the most spectacular events in history, where sport and culture meet to offer a new experience. Get ready to experience the magic of the Olympic Games like never before.";
+
+          document.getElementById("info-title").innerText = "Informations";
+          document.getElementById("info-text").innerText =
+            "Latest competition results :";
+
+          document.querySelector(".translate-btn").innerText =
+            "Traduire en français";
+          currentLanguage = "english"; // Changer l'état de la langue
+        }
+      }
+    </script>
+
+    <header>
+      <a href="index.html">
+        <img src="Image/logoo.png" id="logo" alt="logo"/>
+      </a>
+      <h1 id="header-title">Paris 2024</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="infrastructures.html">Infrastructures</a></li>
+          <li><a href="transports.html">Transports Network</a></li>
+          <li><a href="sports.html">Sports</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <fieldset>
+      <legend>
+        <h2 id="welcome-title">Welcome</h2>
+      </legend>
+      <p id="welcome-text">
+        LA 2028 is coming soon! We're all looking forward to the Olympics
+        starting as soon as possible. Class athletes from all over the world.
+        Los Angeles is set to host one of the most spectacular events in
+        history, where sport and culture meet to offer a new experience. Get
+        ready to experience the magic of the Olympic Games like never before.
+      </p>
+
+      <section class="JO">
+        <img src="Image/Hollywood.PNG" alt="image d'hollywood" id="Hollywood" />
+      </section>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h2 id="info-title">Informations</h2>
+      </legend>
+      <p id="info-text">Latest competition results :</p>
+
+      <section class="JO2">
+        <img
+          src="Image/médailles.png"
+          alt="image des médailles"
+          id="Hollywood"
+        />
+      </section>
+    </fieldset>
+
+    <footer> © Paris 2024 Olympic Games</footer>
+  </body>
+</html>
